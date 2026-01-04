@@ -33,17 +33,17 @@ Data is persisted using localStorage.
    
    cd Employee-Management-Dashboard
 
-3. Install dependencies
+2. Install dependencies
 
    npm i
 
-3.Start the development server
+3. Start the development server
 
- npm start
+  npm start
 
-4.Open http://localhost:3000 in your browser
+4. Open http://localhost:3000 in your browser
 
-5.Login with:
+5. Login with:
 
       Username: admin
       
