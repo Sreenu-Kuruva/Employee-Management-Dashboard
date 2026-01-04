@@ -30,19 +30,22 @@ Data is persisted using localStorage.
 1. Clone the repository
   
    git clone https://github.com/Sreenu-Kuruva/Employee-Management-Dashboard
+   
    cd Employee-Management-Dashboard
 
-2. Install dependencies
+3. Install dependencies
 
    npm i
 
 3.Start the development server
 
-  npm start
+ npm start
 
 4.Open http://localhost:3000 in your browser
 
 5.Login with:
+
       Username: admin
+      
       Password: 12345
       
