@@ -49,7 +49,7 @@ Data is persisted using localStorage.
       
       Password: 12345
 
-Assumptions & Design Decisions
+Assumptions & Design Decisions:
 
 Mock authentication (no backend) — sufficient for assignment
 
