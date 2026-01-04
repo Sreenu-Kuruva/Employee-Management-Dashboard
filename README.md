@@ -48,4 +48,17 @@ Data is persisted using localStorage.
       Username: admin
       
       Password: 12345
-      
+
+Assumptions & Design Decisions
+
+Mock authentication (no backend) — sufficient for assignment
+
+LocalStorage for data persistence (survives page refresh)
+
+Separate CSS file per major component for maintainability
+
+Premium purple-gradient theme with animations for modern feel
+
+Printing uses hidden rendered content with state (avoids react-to-print bugs in newer versions)
+
+No external UI library (pure CSS) for full custom control and lightweight bundle
