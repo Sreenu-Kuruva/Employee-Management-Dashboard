@@ -1,46 +1,46 @@
 const STORAGE_KEY = 'employees';
 
-const initialData = [
-  {
-    id: '1',
-    fullName: 'John Doe',
-    gender: 'Male',
-    dob: '1990-05-15',
-    state: 'California',
-    profileImage: '',
-    active: true
-  }
-];
-
 const getEmployees = () => {
   const data = localStorage.getItem(STORAGE_KEY);
   if (!data) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(initialData));
-    return initialData;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify([]));
+    return [];
   }
-  return JSON.parse(data);
+  try {
+    return JSON.parse(data);
+  } catch (error) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify([]));
+    return [];
+  }
 };
 
-export default {
+const employeeService = {
   getAll: () => getEmployees(),
-  getById: (id) => getEmployees().find(e => e.id === id),
-  add: (emp) => {
+  getById: (id) => getEmployees().find((emp) => emp.id === id),
+  add: (employee) => {
     const employees = getEmployees();
-    employees.push(emp);
+    employees.push(employee);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(employees));
   },
-  update: (updated) => {
-    const employees = getEmployees().map(e => e.id === updated.id ? updated : e);
+  update: (updatedEmployee) => {
+    const employees = getEmployees().map((emp) =>
+      emp.id === updatedEmployee.id ? { ...updatedEmployee } : emp
+    );
     localStorage.setItem(STORAGE_KEY, JSON.stringify(employees));
   },
   delete: (id) => {
-    const employees = getEmployees().filter(e => e.id !== id);
+    const employees = getEmployees().filter((emp) => emp.id !== id);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(employees));
   },
   toggleActive: (id) => {
-    const employees = getEmployees().map(e =>
-      e.id === id ? { ...e, active: !e.active } : e
+    const employees = getEmployees().map((emp) =>
+      emp.id === id ? { ...emp, active: !emp.active } : emp
     );
     localStorage.setItem(STORAGE_KEY, JSON.stringify(employees));
-  }
+  },
+  reset: () => {
+    localStorage.removeItem(STORAGE_KEY);
+  },
 };
+
+export default employeeService;
