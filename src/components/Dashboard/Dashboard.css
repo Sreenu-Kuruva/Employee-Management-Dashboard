@@ -1,0 +1,78 @@
+.dashboard {
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2.8rem;
+  background: linear-gradient(to right, #4f46e5, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.add-btn {
+  background: linear-gradient(to right, #10b981, #059669);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.filters input,
+.filters select {
+  padding: 0.8rem 1.2rem;
+  border-radius: 16px;
+  border: 2px solid #e2e8f0;
+  background: white;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 5rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.empty-state h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #374151;
+}

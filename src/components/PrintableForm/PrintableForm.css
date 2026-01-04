@@ -1,0 +1,51 @@
+@media print {
+
+  /* Make the table visible during print */
+  .table-wrapper,
+  .table-wrapper * {
+    visibility: visible;
+  }
+
+  .table-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  table.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    /* shrink text to fit one page */
+  }
+
+  table.employee-table th,
+  table.employee-table td {
+    padding: 4px 6px;
+    /* reduce row height for print */
+  }
+
+  img.profile-img {
+    width: 40px;
+    /* shrink profile images for print */
+    height: 40px;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    /* prevent rows from splitting across pages */
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hide everything else except table and its children */
+  /* body *:not(.table-wrapper):not(.table-wrapper *) {
+    visibility: hidden;
+  } */
+}

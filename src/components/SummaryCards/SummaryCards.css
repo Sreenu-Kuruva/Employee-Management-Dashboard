@@ -1,0 +1,49 @@
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.summary-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.summary-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+}
+
+.summary-card.total::before {
+  background: linear-gradient(to right, #8b5cf6, #ec4899);
+}
+
+.summary-card.active::before {
+  background: linear-gradient(to right, #10b981, #059669);
+}
+
+.summary-card.inactive::before {
+  background: linear-gradient(to right, #ef4444, #dc2626);
+}
+
+.summary-card h3 {
+  font-size: 3rem;
+  margin: 1rem 0 0.5rem;
+  color: #1e293b;
+}
+
+.summary-card p {
+  color: #64748b;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
