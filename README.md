@@ -39,7 +39,7 @@ Data is persisted using localStorage.
 
 3. Start the development server
 
-  npm start
+   npm start
 
 4. Open http://localhost:3000 in your browser
 
